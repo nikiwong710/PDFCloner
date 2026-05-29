@@ -1,0 +1,6 @@
+{
+  "name": "PDF Cloner & Renamer",
+  "description": "Upload a PDF, customize flexible naming conventions with dynamic prefixes, suffixes, and counter settings, edit individually generated filenames, and download the cloned files instantly inside a ZIP archive.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
