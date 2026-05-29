@@ -1,0 +1,34 @@
+name = "pdfcloner"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.js"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.css"]
+fallthrough = true
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**"]
+
+[build.upload]
+format = "service-worker"
+
+[[env.production.routes]]
+pattern = "pdfcloner.pages.dev/*"
+zone_name = "pages.dev"
+custom_domain = true
+
+[env.production.env_vars]
+ENVIRONMENT = "production"
